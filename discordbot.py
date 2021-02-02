@@ -8,7 +8,7 @@ class MyClient(discord.Client):
         print('Message from {0.author}: {0.content}'.format(message))
 
 client = MyClient()
-client.run('my token goes here')
+client.run("ODAyMjE2ODI4MjI2NzY0ODkx.YAsApA.M5e_3o4zP4w2RMnHQEXSE0vozbw")
 
 # IMPORT DISCORD.PY. ALLOWS ACCESS TO DISCORD'S API.
 import discord
@@ -21,9 +21,10 @@ from dotenv import load_dotenv
 
 # LOADS THE .ENV FILE THAT RESIDES ON THE SAME LEVEL AS THE SCRIPT.
 load_dotenv()
+discordToken=("ODAyMjE2ODI4MjI2NzY0ODkx.YAsApA.M5e_3o4zP4w2RMnHQEXSE0vozbw")
 
 # GRAB THE API TOKEN FROM THE .ENV FILE.
-DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+discordToken = os.getenv("DISCORD_TOKEN")
 
 # GETS THE CLIENT OBJECT FROM DISCORD.PY. CLIENT IS SYNONYMOUS WITH BOT.
 bot = discord.Client()
@@ -43,15 +44,36 @@ async def on_ready():
 		guild_count = guild_count + 1
 
 	# PRINTS HOW MANY GUILDS / SERVERS THE BOT IS IN.
-	print("SampleDiscordBot is in " + str(guild_count) + " guilds.")
+	print("Thine Bottacle is in " + str(guild_count) + " guilds.")
 
 # EVENT LISTENER FOR WHEN A NEW MESSAGE IS SENT TO A CHANNEL.
 @bot.event
 async def on_message(message):
 	# CHECKS IF THE MESSAGE THAT WAS SENT IS EQUAL TO "HELLO".
-	if message.content == "hello":
+	if message.content == "Hey bot":
 		# SENDS BACK A MESSAGE TO THE CHANNEL.
-		await message.channel.send("hey dirtbag")
+		await message.channel.send("Sup brother")
+
+# to search 
+query = "{}"
+
+for j in search(query, tld="co.in", num=10, stop=10, pause=2): 
+	print(j)
+
+import webbrowser
+import discord
+client = discord.client()
+
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('open google','!search', 'google'):
+        webbrowser.open('https://www.google.com/search?q={}')
+        {}.format("")
+
 
 # EXECUTES THE BOT WITH THE SPECIFIED TOKEN. TOKEN HAS BEEN REMOVED AND USED JUST AS AN EXAMPLE.
-bot.run(DISCORD_TOKEN)
+bot.run(discordToken)
