@@ -8,7 +8,7 @@ class MyClient(discord.Client):
         print('Message from {0.author}: {0.content}'.format(message))
 
 client = MyClient()
-client.run("ODAyMjE2ODI4MjI2NzY0ODkx.YAsApA.M5e_3o4zP4w2RMnHQEXSE0vozbw")
+client.run("thediscordbottokenthatIwontshareontheinternet")
 
 # IMPORT DISCORD.PY. ALLOWS ACCESS TO DISCORD'S API.
 import discord
@@ -21,7 +21,7 @@ from dotenv import load_dotenv
 
 # LOADS THE .ENV FILE THAT RESIDES ON THE SAME LEVEL AS THE SCRIPT.
 load_dotenv()
-discordToken=("ODAyMjE2ODI4MjI2NzY0ODkx.YAsApA.M5e_3o4zP4w2RMnHQEXSE0vozbw")
+discordToken=("thediscordbottokenthatIwontshareontheinternet")
 
 # GRAB THE API TOKEN FROM THE .ENV FILE.
 discordToken = os.getenv("DISCORD_TOKEN")
